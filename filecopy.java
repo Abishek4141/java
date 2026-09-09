@@ -1,0 +1,24 @@
+import java.io.*;
+class Filecopy
+{
+public static void main(String[] args)
+{
+String source="Source.txt";
+String designation="Designation.txt";
+try
+{
+FileInputStream fis=new FileInputStream("Source.txt");
+FileOutputStream fos=new FileOutputStream("Designation.txt");
+int data;
+while((data=fis.read())!=-1)
+{
+fos.write(data);
+}
+System.out.println("File copied Sucessfully");
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+}
